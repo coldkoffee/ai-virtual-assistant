@@ -1,0 +1,70 @@
+WakeWord Detection Module:
+
+1. Data Recording Script - To record sample voices for wakeword and ambient noise
+
+Dependencies:
+I) sounddevice - This is used to record audio data from a sound device into a NumPy array
+
+II) scipy.io.wavfile.write  - Write a 1D or 2D NumPy array as an uncompressed WAV file.
+
+Purpose:
+To collect the audio data for the wakeword, i.e., "Hey Alan" and ambient noise.
+
+
+
+
+
+
+2. Data Preprocessing Script - To preprocess the data for the AI model to train on
+	
+Dependencies:
+I) os.listdir(directory) - lists all the files (including sub-directories) in the mentioned directory
+		
+II) librosa - Used for sound analysis
+- librosa.load(sound) takes in an audio file as floting point time series and returns an audio time series as a numpy array and the sample rate which is 22050 by default
+- librosa.feature.mfcc(audio_time_series) takes in an audio file as floting point audio time series, sample rate, and number of mfccs to return a numpy array of MFCC sequence containing the required number of coefficients 	
+				
+III) librosa.display
+-waveshow - Visualize a waveform in the time domain
+.waveshow(data_from_numpy_arr, sample_rate) plots a waveform graph using a numpy array of time series data with a given sample rate	
+		
+-specshow - The color mesh object produced by matplotlib.pyplot.pcolormesh
+.specshow(mfccs, 
+
+IV) matplotlib.pyplot as plt - for plotting graphs and handling their GUI
+
+V) numpy as np
+- mostly to store sound data in numpy arrays and use it in various functions
+
+VI) pandas - a scientific data analysis tool
+- similar to numpy but higher-level, it has row-numberings and column-title for array-like data
+- it is completely based on numpy
+- using it for storing the pre-processed data in a pickled-csv file
+
+Purpose:
+To Pre-Process, Pickle and Store all audio-data in a CSV file to train the Wakeword model
+
+
+
+
+
+3. Model Training Script - Build an ML Model and train it to recognise a wakeword
+
+Dependencies:
+I) NumPy - Needed for numpy arrays which is the foundational format in which all pre-processed training data are present
+- numpy.concatenate - To concatenate all the feature (audio data) from the preprocessed data
+- numpy.reshape - The concatenated features and labels from the preprocessed data are in the same row but in different columns. Reshape is used to put those data in different rows for better segregation.
+
+II) Pandas - A scientific data analysis tool
+- pandas.read_pickle To read from the pickled Preprocessing Data and unpickle it
+
+III) Sklearn - A Python module for machine learning built on top of SciPy and interoperable with numpy
+- sklearn.model_selection.train_test_split - To split arrays or matrices into random train and test subsets. For randomising the training and testing data for better learning.
+- 
+
+IV) Tensorflow
+- tf.keras.utils.to_categorical - To convert a class vector(integer) to a binary class matrix for the 0 and 1 class data
+- tensorflow.keras.Sequential - To create the model's architecture
+
+V) Matplotlib - Plots and produces GUIs for graphs
+- matplotlib.pyplot.show() - for plotting the confusion matrix

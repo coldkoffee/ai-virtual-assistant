@@ -1,0 +1,310 @@
+{
+    "intents":[
+        {
+            "tag":"greeting",
+            "patterns":[
+                "Hi","Hey","How are you?","hello","Good day"
+            ],
+            "responses":[
+                "Hey","Hi there,what can i do for you?"
+            ]
+        },
+
+        {
+            "tag":"weather",
+            "patterns":[
+                "weather report","today's weather","whats the weather","weather forecast","weather","give me the weather report"
+            ],
+            "responses":[
+                "weather"
+            ]
+        },
+
+        {
+            "tag":"time",
+            "patterns":[
+                "time","what's the time","whats the time","what's time","tell me the time"
+            ],
+            "responses":[
+                "time"
+            ]
+        },
+
+        {
+            "tag":"online_order",
+            "patterns":[
+                "find me","i want to order a","i want to order","order a","order me a"
+            ],
+            "responses":[
+                "online_order"
+            ]
+        },
+        {
+            "tag":"open",
+            "patterns":[
+                "open","launch","visit","start"
+            ],
+            "responses":[
+                "open"
+            ]
+        },
+        {
+            "tag":"close",
+            "patterns":[
+                "close","terminate","kill"
+            ],
+            "responses":[
+                "close"
+            ]
+        },
+        {
+            "tag":"camera",
+            "patterns":[
+                "take a pitcure","click a pitcure","take a snap","turn on camera","open camera"
+            ],
+            "responses":[
+                "camera"
+            ]
+        },
+        {
+            "tag":"create_file",
+            "patterns":[
+                "make a file","create a file","create a file","construct a file","devise a file","form a file","generate a file",
+                "produce a file","build a file","design a file","fabricate a file",".txt","create","make"
+            ],
+            "responses":[
+                "create_file"
+            ]
+        },
+        {
+            "tag":"delete_file",
+            "patterns":[
+                "delete a file","remove a file","destroy a file","trash a file","scrap a file","cut a file","erase a file",".txt","delete","remove"
+            ],
+            "responses":[
+                "delete_file"
+            ]
+        },
+        {
+            "tag":"delete_directory",
+            "patterns":[
+                "delete a folder","remove a folder","destroy a folder","trash a folder","scrap a folder","cut a folder","erase a folder",
+                "delete a directory","remove a directory","destroy a directory","trash a directory","scrap a directory","cut a directory","erase a directory"
+            ],
+            "responses":[
+                "delete_directory"
+            ]
+        },
+        {
+            "tag":"create_directory",
+            "patterns":[
+                "make a directoy","create a directory","construct a directory","devise a directory","form a directory","generate a directory",
+                "produce a directory","build a directory","design a directory","fabricate a directory",
+                "make a folder","create a folder","construct a folder","devise a folder","form a folder","generate a folder",
+                "produce a folder","build a folder","design a folder","fabricate a folder"
+            ],
+            "responses":[
+                "create_directory"
+            ]
+        },
+        {
+            "tag":"change_directory",
+            "patterns":[
+                "goto","change","switch","goto directory","change directory ","switch directory","goto folder","change folder","switch folder"
+            ],
+            "responses":[
+                "change_directory"
+            ]
+        },
+        {
+            "tag":"computation",
+            "patterns":[
+                "calculate","do calculation","perform mathematical computation","math calculation","compute","solve","equation"
+            ],
+            "responses":[
+                "computation"
+            ]
+        },
+        {
+            "tag":"news",
+            "patterns":[
+                "latest news","today's news","read news","read headlines","news articles","news paper","tell me the news","breaking news"
+            ],
+            "responses":[
+                "news"
+            ]
+        },
+        {
+            "tag":"note",
+            "patterns":[
+                "remember that","make a note","take a note","note down","write down"
+            ],
+            "responses":[
+                "note"
+            ]
+        },
+        {
+            "tag":"read_note",
+            "patterns":[
+                "what do you remember","tell me the note","what you have noted","read note that you remembered","read what you written down"
+            ],
+            "responses":[
+                "read_note"
+            ]
+        },
+        {
+            "tag":"wikipedia",
+            "patterns":[
+                "wikipedia","according to wikipedia","from wikipedia","search from wikipedia"
+            ],
+            "responses":[
+                "wikipedia"
+            ]
+        },
+        {
+            "tag":"google_search",
+            "patterns":[
+                "what is","what are","what is the use of","who is","who are","meaning of","who","what","why","where","google","how"
+            ],
+            "responses":[
+                "google_search"
+            ]
+        },
+        {
+            "tag":"how_to",
+            "patterns":[
+                "how to","how to make","how to meet"
+            ],
+            "responses":[
+                "how_to"
+            ]
+        },
+        {
+            "tag":"play_on_yt",
+            "patterns":[
+                "play song on youtube","play","video","movie","youtube"
+            ],
+            "responses":[
+                "play_on_yt"
+            ]
+        },
+        {
+            "tag":"joke",
+            "patterns":[
+                "programming joke","joke","tell me joke","crack joke","humor","make me laugh","laugh"
+            ],
+            "responses":[
+                "joke"
+            ]
+        },
+        {
+            "tag":"shutdown",
+            "patterns":[
+                "shutdown","turn off","turn off computer","shutoff","switch off"
+            ],
+            "responses":[
+                "shutdown"
+            ]
+        },
+        {
+            "tag":"restart",
+            "patterns":[
+                "restart","reboot","reopen the computer","turn on computer back","restart pc","reboot this pc"
+            ],
+            "responses":[
+                "restart"
+            ]
+        },
+        {
+            "tag":"manual",
+            "patterns":[
+                "manual","information about","man","instructions","guide"
+            ],
+            "responses":[
+                "manual"
+            ]
+        },
+        {
+            "tag":"create_user",
+            "patterns":[
+                "create user","add user","make user","create account","make account"
+            ],
+            "responses":[
+                "create_user"
+            ]
+        },
+        {
+            "tag":"delete_user",
+            "patterns":[
+                "delete user","remove user","trash user","trash account","destroy account"
+            ],
+            "responses":[
+                "delete_user"
+            ]
+        },
+        {
+            "tag":"change_passsword",
+            "patterns":[
+                "change password","update password","edit password","reset password"
+            ],
+            "responses":[
+                "change_password"
+            ]
+        },
+        {
+            "tag":"ip_address",
+            "patterns":[
+                "ip address","find ip","internet protocol","network address","whats the ip of my pc","ip of connected network"
+            ],
+            "responses":[
+                "ip_address"
+            ]
+        },
+        {
+            "tag":"job_schedule",
+            "patterns":[
+                "schedule","task","job","cronjob","perform task scheduling","crontab"
+            ],
+            "responses":[
+                "job_schedule"
+            ]
+        },
+        {
+            "tag":"switch_window",
+            "patterns":[
+                "change tab","switch to next window","change window","switch tab"
+            ],
+            "responses":[
+                "switch_window"
+            ]
+        },
+        {
+            "tag":"name",
+            "patterns":[
+                "what is your name","what should i call you","who are you"
+            ],
+            "responses":[
+                "alan","you can call me alan","an ai based desktop assistan alan"
+            ]
+        },
+        {
+            "tag":"change_permission",
+            "patterns":[
+                "change permission of file","change permission of folder","change permission of directory","permission","chmod",
+                "file","directory","change mode"
+            ],
+            "responses":[
+                "change_permission"
+            ]
+        },
+        {
+            "tag":"goodbye",
+            "patterns":[
+                "goodbye","see you later","bye","i am leaving","have a good day"
+            ],
+            "responses":[
+                "goodbye"
+            ]
+        }
+    ]
+}
